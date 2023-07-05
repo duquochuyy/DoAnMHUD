@@ -40,10 +40,10 @@
                             <a class="nav-link" href="#">Link</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="./aes.html">AES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/steganography.html">Steganography</a>
+                            <a class="nav-link" href="./steganography.html">Steganography</a>
                         </li>
 
                         <!-- <li class="nav-item dropdown">
@@ -73,22 +73,22 @@
     
             <section class="col col-md-9">
                 <div class="container">
-                    <h1 class="text-info">Hiding text in images using Plain JavaScript</h1>
-                    <div id="description">You can hide and retrieve messages in a picture within seconds. Upload a file then
-                        type in the message you want to hide then click hide. To retrieve messages from these images upload the
-                        image wwith hidden text then click the 'Read' button.</div>
+                    <h1 class="text-info">Nhúng thông điệp vào file ảnh</h1>
+                    <div id="description">Bạn có thể ẩn và truy xuất tin nhắn trong ảnh chỉ trong vài giây. Tải lên một tập tin sau đó
+                        nhập tin nhắn bạn muốn ẩn sau đó bấm "Mã hóa". Để truy xuất tin nhắn từ những hình ảnh này, hãy tải lên
+                        hình ảnh với văn bản ẩn, sau đó nhấp vào nút 'Giải mã'.</div>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-4">
                                 <h2 class="text-success">Image:</h2>
-                                <input id="file" type="file" />
+                                <input id="file" type="file" accept="image/*"/>
                             </div>
                             <div class="col-md-8">
                                 <h2 class="text-warning">Text:<span id="capacity"></span></h2>
                                 <textarea class="w-100 h-50" id="text">Your secret message</textarea>
                                 <div class="btns">
-                                    <span id="hide" class="btn btn-outline-warning">Hide</span>
-                                    <span id="read" class="btn btn-outline-success">Read</span>
+                                    <span id="hide" class="btn btn-outline-warning">Mã hóa</span>
+                                    <span id="read" class="btn btn-outline-success">Giải mã</span>
                                 </div>
                             </div>
                         </div>
@@ -127,6 +127,7 @@
 
     </footer>
 
+    <!-- https://cloudinary.com/blog/guest_post/hiding-text-in-images-using-plain-javascript?fbclid=IwAR3i6Y1dSlU3b4vOclZUW7b9KnaQ_4euvFchlphniWhfSAb0-swu-Y5CmBg -->
 
     <script src="./scripts/main.js"></script>
 
