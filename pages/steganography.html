@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="../style/steganography.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+              <div class="container">
+                <a class="navbar-brand" href="../index.html">Đồ án MHUD</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../index.html" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/steganography.html">Steganography</a>
+                        </li>
+
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="#">Action 1</a>
+                                <a class="dropdown-item" href="#">Action 2</a>
+                            </div>
+                        </li> -->
+                    </ul>
+                    <form class="d-flex my-2 my-lg-0">
+                        <input class="form-control me-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+          </div>
+        </nav>
+        
+    </header>
+
+    <main class="container">
+       <div class="row">
+            <aside class="col col-md-3">
+                <div class="w-100 h-100 bg-black">
+                </div>
+            </aside>
+    
+            <section class="col col-md-9">
+                <div class="container">
+                    <h1 class="text-info">Hiding text in images using Plain JavaScript</h1>
+                    <div id="description">You can hide and retrieve messages in a picture within seconds. Upload a file then
+                        type in the message you want to hide then click hide. To retrieve messages from these images upload the
+                        image wwith hidden text then click the 'Read' button.</div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h2 class="text-success">Image:</h2>
+                                <input id="file" type="file" />
+                            </div>
+                            <div class="col-md-8">
+                                <h2 class="text-warning">Text:<span id="capacity"></span></h2>
+                                <textarea class="w-100 h-50" id="text">Your secret message</textarea>
+                                <div class="btns">
+                                    <span id="hide" class="btn btn-outline-warning">Hide</span>
+                                    <span id="read" class="btn btn-outline-success">Read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="messageArea" class="mb-3 pb-3 invisible">
+                        <h2 class="text-info">Message:</h2>
+                        <div class="mb-3" id="message"></div><span id='copy' onclick="copyText()"
+                            class="btn btn-outline-info">Copy Text</span>
+                    </div>
+                    <div id="right" class="row">
+                        <div id="original" class="col col-md-6">
+                            <h2>Plain Image:</h2>
+                            <div class="card">
+                                <img id="img" class="card-img" src="../image/steganography/original.png" />
+                            </div>
+                        </div>
+                        <div id="stego" class="col col-md-6">
+                            <h2>Encoded Image:</h2>
+                            <div class="card">
+                                <img id="cover" class="card-img" src="" />
+                                <div class="card-img-overlay"><a id="download" class="btn btn-success" download="cover.png"
+                                        rel="nofollow">Download</a></div>
+                            </div>
+                            <!-- <img id="cover" src=""/>
+                            <a id="download" class="btn btn-success" download="cover.png" rel="nofollow"></a> -->
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+        
+                </div>
+            </section>
+       </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+    <script src="./scripts/main.js"></script>
+
+    <script type="text/javascript" src="../scripts/steganography.js"></script>
+    <script type="text/javascript" src="../scripts/lib/steganography.min.js"></script>
+</body>
+
+</html>

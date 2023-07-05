@@ -1,0 +1,11 @@
+.invisible {
+    visibility:hidden;
+}
+
+.clear {
+    clear:both;
+}
+
+.text-info {
+    color: black !important;
+}
