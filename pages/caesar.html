@@ -36,25 +36,19 @@
                             <a class="nav-link" href="#">Link</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/caesar.html">Caesar</a>
+                            <a class="nav-link" href="./caesar.html">Link</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/base64.html">Base64</a>
+                            <a class="nav-link" href="./base64.html">Link</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/aes.html">AES</a>
+                            <a class="nav-link" href="./aes.html">AES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/steganography.html">Steganography</a>
+                            <a class="nav-link" href="./steganography.html">Steganography</a>
                         </li>
 
-                        <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownId">
-                                <a class="dropdown-item" href="#">Action 1</a>
-                                <a class="dropdown-item" href="#">Action 2</a>
-                            </div>
-                        </li> -->
+
                     </ul>
                     <form class="d-flex my-2 my-lg-0">
                         <input class="form-control me-sm-2" type="text" placeholder="Search">
@@ -75,17 +69,16 @@
 
             <section class="col col-md-9">
                 <div class="container">
-                    <h1 class="text-info">Mã hóa thông điệp bằng AES</h1>
-                    <div id="description">- Để mã hóa bạn chỉ cần nhâp Text hoặc chọn file văn bản muốn mã hóa và nhập
-                        Key để mã hóa.</div>
-                    <div id="description">- Để giải mã bạn chỉ cần nhâp Text hoặc file văn bản cần giải mã (đã đươc mã
-                        hóa từ trước) và nhập đúng Key để có thể giải mã.</div>
+                    <h1 class="text-info">Mã hóa thông điệp bằng Caesar</h1>
+                    <div id="description">- Mã hóa Caesar là một loại mã hóa đơn giản, trong đó mỗi ký tự trong văn bản
+                        gốc được thay thế bằng một ký tự cách xa một số lượng cố định trong bảng chữ cái.</div>
 
                     <!-- <div class="row mt-5"> -->
                     <form action="" class="mt-3">
                         <div class="form-group">
                             <label for="chua-ma-hoa">Nội dung muốn mã hóa</label>
-                            <input class="form-control form-control-lg" id="chua-ma-hoa" type="text" placeholder="">
+                            <textarea id="chua-ma-hoa" name="txt" rows="5" cols="60" class="form-control"
+                                placeholder="Nhập nội dung muốn mã hóa ..." autofocus></textarea>
                         </div>
 
                         <div class="form-group w-100">
@@ -96,8 +89,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="public-key1">Key mã hóa</label>
-                            <input class="form-control form-control-lg" id="public-key1" type="password" placeholder=""
+                            <label for="public-key1">Số bước nhảy</label>
+                            <input class="form-control form-control-lg" id="public-key1" type="number" placeholder=""
                                 required>
                         </div>
                         <button type="button" class="btn btn-primary mt-3" id="buttonEncrypt">Mã hóa</button>
@@ -108,7 +101,8 @@
                     <form action="" class="mt-5">
                         <div class="form-group">
                             <label for="da-ma-hoa">Nội dung muốn giải mã</label>
-                            <input class="form-control form-control-lg" id="da-ma-hoa" type="text" placeholder="">
+                            <textarea id="da-ma-hoa" name="txt" rows="5" cols="60" class="form-control"
+                                placeholder="Nhập nội dung muốn giải mã ..." autofocus></textarea>
                         </div>
 
                         <div class="form-group">
@@ -118,16 +112,13 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="public-key2">Key giải mã</label>
-                            <input class="form-control form-control-lg" id="public-key2" type="password" placeholder=""
+                            <label for="public-key2">Số bước nhảy</label>
+                            <input class="form-control form-control-lg" id="public-key2" type="number" placeholder=""
                                 required>
                         </div>
                         <button type="button" class="btn btn-primary mt-3" id="buttonDecrypt">Giải mã</button>
                     </form>
                 </div>
-
-
-                <!-- </div> -->
             </section>
         </div>
     </main>
@@ -142,7 +133,7 @@
 
     <script src="./scripts/main.js"></script>
 
-    <script src="../scripts/aes.js"></script>
+    <script src="../scripts/caesar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 </body>

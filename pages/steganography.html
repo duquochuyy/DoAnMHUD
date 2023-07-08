@@ -19,31 +19,33 @@
 
     <header>
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
-              <div class="container">
+            <div class="container">
                 <a class="navbar-brand" href="../index.html">Đồ án MHUD</a>
-                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="../index.html" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                            <a class="nav-link active" href="../index.html" aria-current="page">Home <span
+                                    class="visually-hidden">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Link</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="./pages/caesar.html">Caesar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="./pages/base64.html">Base64</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./aes.html">AES</a>
+                            <a class="nav-link" href="./pages/aes.html">AES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./steganography.html">Steganography</a>
+                            <a class="nav-link" href="./pages/steganography.html">Steganography</a>
                         </li>
 
                         <!-- <li class="nav-item dropdown">
@@ -59,29 +61,31 @@
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </div>
-          </div>
+            </div>
         </nav>
-        
+
     </header>
 
     <main class="container">
-       <div class="row">
+        <div class="row">
             <aside class="col col-md-3">
                 <div class="w-100 h-100 bg-black">
                 </div>
             </aside>
-    
+
             <section class="col col-md-9">
                 <div class="container">
                     <h1 class="text-info">Nhúng thông điệp vào file ảnh</h1>
-                    <div id="description">Bạn có thể ẩn và truy xuất tin nhắn trong ảnh chỉ trong vài giây. Tải lên một tập tin sau đó
-                        nhập tin nhắn bạn muốn ẩn sau đó bấm "Mã hóa". Để truy xuất tin nhắn từ những hình ảnh này, hãy tải lên
+                    <div id="description">Bạn có thể ẩn và truy xuất tin nhắn trong ảnh chỉ trong vài giây. Tải lên một
+                        tập tin sau đó
+                        nhập tin nhắn bạn muốn ẩn sau đó bấm "Mã hóa". Để truy xuất tin nhắn từ những hình ảnh này, hãy
+                        tải lên
                         hình ảnh với văn bản ẩn, sau đó nhấp vào nút 'Giải mã'.</div>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-4">
                                 <h2 class="text-success">Image:</h2>
-                                <input id="file" type="file" accept="image/*"/>
+                                <input id="file" type="file" accept="image/*" />
                             </div>
                             <div class="col-md-8">
                                 <h2 class="text-warning">Text:<span id="capacity"></span></h2>
@@ -109,18 +113,18 @@
                             <h2>Encoded Image:</h2>
                             <div class="card">
                                 <img id="cover" class="card-img" src="" />
-                                <div class="card-img-overlay"><a id="download" class="btn btn-success" download="cover.png"
-                                        rel="nofollow">Download</a></div>
+                                <div class="card-img-overlay"><a id="download" class="btn btn-success"
+                                        download="cover.png" rel="nofollow">Download</a></div>
                             </div>
                             <!-- <img id="cover" src=""/>
                             <a id="download" class="btn btn-success" download="cover.png" rel="nofollow"></a> -->
                         </div>
                     </div>
                     <div class="clear"></div>
-        
+
                 </div>
             </section>
-       </div>
+        </div>
     </main>
 
     <footer>
