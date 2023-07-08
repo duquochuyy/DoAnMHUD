@@ -160,3 +160,22 @@ window.onload = () => {
     document.getElementById('buttonDecryptImage').addEventListener('click', decryptImage, false);
     document.getElementById('buttonDecrypt').addEventListener('click', decrypt, false);
 }
+
+const Text = $('.btn-text');
+const Image = $('.btn-image');
+const partText = $('.text-message');
+const partImage = $('.image-message');
+
+function displayText() {
+    Text.addClass('active')
+    partImage.addClass('d-none');
+    Image.removeClass("active");
+    partText.removeClass('d-none');
+}
+
+function displayImage() {
+    Image.addClass('active')
+    partText.addClass('d-none');
+    Text.removeClass("active");
+    partImage.removeClass('d-none');
+}
