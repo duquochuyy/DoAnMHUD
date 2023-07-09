@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Mã hóa Caesar</title>
+    <title>About</title>
     <link rel="icon" type="image/x-icon"
         href="https://t4.ftcdn.net/jpg/03/14/29/07/360_F_314290715_PDMAmK7Bbhw73Y57eT8sI57hrpddeaEu.jpg">
     <meta charset="utf-8">
@@ -14,7 +14,6 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="./style/main.css">
-    <link rel="stylesheet" href="../style/aes.css">
 </head>
 
 <body>
@@ -50,6 +49,14 @@
                             <a class="nav-link" href="./about.html">About</a>
                         </li>
 
+
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="#">Action 1</a>
+                                <a class="dropdown-item" href="#">Action 2</a>
+                            </div>
+                        </li> -->
                     </ul>
                     <!-- <form class="d-flex my-2 my-lg-0">
                         <input class="form-control me-sm-2" type="text" placeholder="Search">
@@ -64,58 +71,48 @@
     <main class="container">
         <div class="row">
 
-
             <section class="col col-md-12">
-                <div class="container">
-                    <h1 class="text-info">Mã hóa thông điệp bằng Caesar</h1>
-                    <div id="description">- Mã hóa Caesar là một loại mã hóa đơn giản, trong đó mỗi ký tự trong văn bản
-                        gốc được thay thế bằng một ký tự cách xa một số lượng cố định trong bảng chữ cái.</div>
-
-                    <!-- <div class="row mt-5"> -->
-                    <form action="" class="mt-3">
-                        <div class="form-group">
-                            <label for="chua-ma-hoa">Nội dung muốn mã hóa</label>
-                            <textarea id="chua-ma-hoa" name="txt" rows="5" cols="60" class="form-control"
-                                placeholder="Nhập nội dung muốn mã hóa ..." autofocus></textarea>
-                        </div>
-
-                        <div class="form-group w-100">
-                            <label for="file-chua-ma-hoa">Chọn file để mã hóa</label>
-                            <br>
-                            <input type="file" class="form-control-file col-lg-3" id="file-chua-ma-hoa"
-                                accept=".txt,.doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="public-key1">Số bước nhảy</label>
-                            <input class="form-control form-control-lg" id="public-key1" type="number" placeholder=""
-                                required>
-                        </div>
-                        <button type="button" class="btn btn-primary mt-3" id="buttonEncrypt">Mã hóa</button>
-                    </form>
-
-
-
-                    <form action="" class="mt-5">
-                        <div class="form-group">
-                            <label for="da-ma-hoa">Nội dung muốn giải mã</label>
-                            <textarea id="da-ma-hoa" name="txt" rows="5" cols="60" class="form-control"
-                                placeholder="Nhập nội dung muốn giải mã ..." autofocus></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="file-da-ma-hoa col">Chọn file để giải mã (đúng định dạng file đã mã hóa)</label>
-                            <br>
-                            <input type="file" class="form-control-file col-lg-3" id="file-da-ma-hoa">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="public-key2">Số bước nhảy</label>
-                            <input class="form-control form-control-lg" id="public-key2" type="number" placeholder=""
-                                required>
-                        </div>
-                        <button type="button" class="btn btn-primary mt-3" id="buttonDecrypt">Giải mã</button>
-                    </form>
+                <div class="container min-vh-100">
+                    <h1 class="text-info">Đồ án môn Mã hóa ứng dụng: </h1>
+                    <h1 class="text-info">Phần mềm mã hóa thông điệp trực tuyến </h1>
+                    <div id="description">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Tên</th>
+                                    <th scope="col">MSSV</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Bùi Quốc Trung</th>
+                                    <td>20120023</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Dũ Quốc Huy</th>
+                                    <td>20120101</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Nguyễn Kông Đại</th>
+                                    <td>20120448</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="description" style="font-weight: 500;">
+                        Phần mềm bao gồm nhiều loại mã hóa thông điệp khác nhau:
+                        <ul>
+                            <li><a href="https://vi.wikipedia.org/wiki/M%E1%BA%ADt_m%C3%A3_Caesar">Mã hóa Caeser</a>
+                            </li>
+                            <li><a href="https://vi.wikipedia.org/wiki/Base64">Mã hóa Base64</a></li>
+                            <li><a href="https://vi.wikipedia.org/wiki/Advanced_Encryption_Standard">Mã hóa AES</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Steganography">Image Steganography</a></li>
+                        </ul>
+                        <p>Cách dùng phần mềm để mã hóa được mô tả ở từng trang riêng.</p>
+                        <p>Việc thực hiện đồ án nhằm giúp ôn luyện lại kiến thức đã được học thông qua môn Mã hóa ứng
+                            dụng, từ đó ứng dụng để tạo ra một công cụ giúp người dùng có thể nhanh chóng mã hóa trực
+                            tuyến các thông điệp một cách nhanh chóng và tiện lợi!</p>
+                    </div>
                 </div>
             </section>
         </div>
@@ -130,10 +127,6 @@
 
 
     <script src="./scripts/main.js"></script>
-
-    <script src="../scripts/caesar.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 </body>
 
 </html>

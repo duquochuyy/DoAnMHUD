@@ -1,11 +1,11 @@
 .invisible {
-    visibility:hidden;
+  visibility: hidden;
 }
 
 .clear {
-    clear:both;
+  clear: both;
 }
 
-.text-info {
+/* .text-info {
     color: black !important;
-}
+} */
