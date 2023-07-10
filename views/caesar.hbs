@@ -1,0 +1,65 @@
+<main class="container">
+    <div class="row">
+
+
+        <section class="col col-md-12">
+            <div class="container">
+                <h1 class="text-info">Mã hóa thông điệp bằng Caesar</h1>
+                <div id="description">- Mã hóa Caesar là một loại mã hóa đơn giản, trong đó mỗi ký tự trong văn bản
+                    gốc được thay thế bằng một ký tự cách xa một số lượng cố định trong bảng chữ cái.</div>
+
+                <!-- <div class="row mt-5"> -->
+                <form action="" class="mt-3">
+                    <div class="form-group">
+                        <label for="chua-ma-hoa">Nội dung muốn mã hóa</label>
+                        <textarea id="chua-ma-hoa" name="txt" rows="5" cols="60" class="form-control"
+                            placeholder="Nhập nội dung muốn mã hóa ..." autofocus></textarea>
+                    </div>
+
+                    <div class="form-group w-100">
+                        <label for="file-chua-ma-hoa">Chọn file để mã hóa</label>
+                        <br>
+                        <input type="file" class="form-control-file col-lg-3" id="file-chua-ma-hoa"
+                            accept=".txt,.doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="public-key1">Số bước nhảy</label>
+                        <input class="form-control form-control-lg" id="public-key1" type="number" placeholder=""
+                            required>
+                    </div>
+                    <button type="button" class="btn btn-primary mt-3" id="buttonEncrypt">Mã hóa</button>
+                </form>
+
+
+
+                <form action="" class="mt-5">
+                    <div class="form-group">
+                        <label for="da-ma-hoa">Nội dung muốn giải mã</label>
+                        <textarea id="da-ma-hoa" name="txt" rows="5" cols="60" class="form-control"
+                            placeholder="Nhập nội dung muốn giải mã ..." autofocus></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="file-da-ma-hoa col">Chọn file để giải mã (đúng định dạng file đã mã hóa)</label>
+                        <br>
+                        <input type="file" class="form-control-file col-lg-3" id="file-da-ma-hoa">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="public-key2">Số bước nhảy</label>
+                        <input class="form-control form-control-lg" id="public-key2" type="number" placeholder=""
+                            required>
+                    </div>
+                    <button type="button" class="btn btn-primary mt-3" id="buttonDecrypt">Giải mã</button>
+                </form>
+            </div>
+        </section>
+    </div>
+</main>
+
+<script src="/scripts/main.js"></script>
+
+<script src="/scripts/caesar.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>

@@ -1,0 +1,64 @@
+<main class="container">
+    <div class="row">
+
+
+        <section class="col col-md-12">
+            <div class="container">
+                <h1 class="text-info">Nhúng thông điệp vào file ảnh</h1>
+                <div id="description">Bạn có thể ẩn và truy xuất tin nhắn trong ảnh chỉ trong vài giây. Tải lên một
+                    tập tin sau đó
+                    nhập tin nhắn bạn muốn ẩn sau đó bấm "Mã hóa". Để truy xuất tin nhắn từ những hình ảnh này, hãy
+                    tải lên
+                    hình ảnh với văn bản ẩn, sau đó nhấp vào nút 'Giải mã'.</div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h2 class="text-success">Image:</h2>
+                            <input id="file" type="file" accept="image/*" />
+                        </div>
+                        <div class="col-md-8">
+                            <h2 class="text-warning">Text:<span id="capacity"></span></h2>
+                            <textarea class="w-100 h-50" id="text">Your secret message</textarea>
+                            <div class="btns">
+                                <span id="hide" class="btn btn-outline-warning">Mã hóa</span>
+                                <span id="read" class="btn btn-outline-success">Giải mã</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="messageArea" class="mb-3 pb-3 invisible">
+                    <h2 class="text-info">Message:</h2>
+                    <div class="mb-3" id="message"></div><span id='copy' onclick="copyText()"
+                        class="btn btn-outline-info">Copy Text</span>
+                </div>
+                <div id="right" class="row">
+                    <div id="original" class="col col-md-6">
+                        <h2>Plain Image:</h2>
+                        <div class="card">
+                            <img id="img" class="card-img" src="../image/steganography/original.png" />
+                        </div>
+                    </div>
+                    <div id="stego" class="col col-md-6">
+                        <h2>Encoded Image:</h2>
+                        <div class="card">
+                            <img id="cover" class="card-img" src="" />
+                            <div class="card-img-overlay"><a id="download" class="btn btn-success" download="cover.png"
+                                    rel="nofollow">Download</a></div>
+                        </div>
+                        <!-- <img id="cover" src=""/>
+                            <a id="download" class="btn btn-success" download="cover.png" rel="nofollow"></a> -->
+                    </div>
+                </div>
+                <div class="clear"></div>
+
+            </div>
+        </section>
+    </div>
+</main>
+<!-- https://cloudinary.com/blog/guest_post/hiding-text-in-images-using-plain-javascript?fbclid=IwAR3i6Y1dSlU3b4vOclZUW7b9KnaQ_4euvFchlphniWhfSAb0-swu-Y5CmBg -->
+
+<link rel="stylesheet" href="/style/steganography.css">
+<script src="/scripts/main.js"></script>
+
+<script type="text/javascript" src="/scripts/steganography.js"></script>
+<script type="text/javascript" src="/scripts/lib/steganography.min.js"></script>

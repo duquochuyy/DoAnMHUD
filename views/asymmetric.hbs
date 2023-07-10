@@ -1,0 +1,80 @@
+<main class="container">
+    <div class="row">
+
+
+        <section class="col col-md-12">
+            <div class="container">
+                <h1 class="text-info">Mã hóa bất đối xứng</h1>
+                <div id="description">- Mã hóa bất đối xứng (asymmetric encryption) là một phương pháp mã hóa thông tin
+                    sử dụng hai khóa riêng biệt: một khóa được sử dụng để mã hóa dữ liệu (gọi là khóa công khai), và một
+                    khóa khác được sử dụng để giải mã dữ liệu (gọi là khóa bí mật). Các khóa này được tạo ra bằng thuật
+                    toán mã hóa đối xứng cùng với một hàm băm. </br>
+
+                    - Trong quá trình mã hóa, người gửi sử dụng khóa công khai của người nhận để mã hóa thông tin. Sau
+                    đó, thông tin được gửi đến người nhận và chỉ người nhận có thể sử dụng khóa bí mật của mình để giải
+                    mã thông tin đó.</div>
+
+                <hr>
+
+                <!-- <div class="row mt-5"> -->
+
+                <button type="button" class="btn btn-primary mt-3" id="createKeyPair" onclick="createKeyPair()">Tạo cặp
+                    khóa mới</button>
+                <div class="form-group mt-3">
+                    <label for="publicKey">Khóa công khai tạo ra</label>
+                    <textarea id="publicKey" name="" rows="5" cols="60" class="form-control" disabled></textarea>
+                </div>
+
+                <hr>
+
+                <form action="" class="mt-5">
+                    <div class="form-group">
+                        <label for="encrypt">Nội dung muốn mã hóa</label>
+                        <textarea id="encrypt" name="plainText" rows="5" cols="60" class="form-control"
+                            placeholder="Nhập nội dung muốn mã hóa ..." autofocus></textarea>
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <label for="public-key1">Nhập khóa công khai (public key e)</label>
+                        <textarea id="public-key1" rows="5" cols="60" class="form-control" autofocus></textarea>
+                    </div>
+
+                    <button type="button" class="btn btn-primary mt-3" id="buttonEncrypt"
+                        onclick="encryptMessage(document.getElementById('encrypt').value, document.getElementById('public-key1').value)">Mã
+                        hóa</button>
+                </form>
+
+                <div class="form-group mt-3">
+                    <label for="encryptedMessage">Thông điệp đã mã hóa</label>
+                    <textarea id="encryptedMessage" name="" rows="5" cols="60" class="form-control" disabled></textarea>
+                </div>
+
+                <hr>
+
+                <form action="" class="mt-5">
+                    <div class="form-group">
+                        <label for="decrypt">Nội dung muốn giải mã</label>
+                        <textarea id="decrypt" name="cipherText" rows="5" cols="60" class="form-control"
+                            placeholder="Nhập nội dung muốn giải mã ..." autofocus></textarea>
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <label for="public-key2">Nhập khóa công khai (public key e)</label>
+                        <textarea id="public-key2" rows="5" cols="60" class="form-control" autofocus></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary mt-3" id="buttonDecrypt"
+                        onclick="decryptMessage(document.getElementById('decrypt').value, document.getElementById('public-key2').value)">Giải
+                        mã</button>
+                </form>
+
+                <div class="form-group mt-3">
+                    <label for="decryptedMessage">Thông điệp đã giải mã</label>
+                    <textarea id="decryptedMessage" name="" rows="5" cols="60" class="form-control" disabled></textarea>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<script src="/scripts/main.js"></script>
+<script src="/scripts/asymmetric.js"></script>
